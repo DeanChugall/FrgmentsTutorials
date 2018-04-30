@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FrgmentsTutorials</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="how_did_you_get_your_powers">How did you get your powers?</string>
+    <string name="come_by_accident">Come by accident</string>
+    <string name="genetic_mutation">Genetic Mutation</string>
+    <string name="born_with_them">Born with them</string>
+    <string name="chose_power">Chose Power</string>
+    <string name="todo">TODO</string>
+    <string name="pick_a_power">PICK A POWER</string>
+</resources>
