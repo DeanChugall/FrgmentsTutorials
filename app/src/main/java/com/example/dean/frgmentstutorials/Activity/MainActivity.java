@@ -37,19 +37,19 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
     }
 
     public void loadPickPowerScreen() {
-        FragmentManager manager = getSupportFragmentManager();
+        /*FragmentManager manager = getSupportFragmentManager();
 
-        Fragment fragment = manager.findFragmentById(R.id.fragment_container);
+        Fragment fragment = manager.findFragmentById(R.id.fragment_container);*/
+        String test = MainFragment.selectedButton;
 
-
-        this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PickpowerFragment()).addToBackStack(null).commit();
-        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, PickpowerFragment.newInstance(test, test)).addToBackStack(null).commit();
+        /*FragmentTransaction fragmentTransaction = manager.beginTransaction();
         fragmentTransaction.add(R.id.fragment_container, fragment);
 
 
 
 
-        fragmentTransaction.commit();
+        fragmentTransaction.commit();*/
     }
 
     @Override

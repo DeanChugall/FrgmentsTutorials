@@ -40,6 +40,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private Button chosePowerBtn;
     Button btn;
 
+    public static String selectedButton;
+
     public MainFragment() {
         // Required empty public constructor
     }
@@ -141,13 +143,15 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         int rightDrawableGeneticMutationBtn = 0;
         int rightDrawableBornWithThemBtn = 0;
 
+
+
         if (btn == comeByAccidentBtn) {
 
             setSelected(geneticMutationBtn, R.drawable.atomic, 0, 0, 0);
             setSelected(bornWithThemBtn, R.drawable.rocket, 0, 0, 0);
 
             setSelected(btn, R.drawable.lightning, 0, R.drawable.item_selected, 0);
-
+            selectedButton = comeByAccidentBtn.getText().toString();
 
         } else if (btn == geneticMutationBtn) {
             setSelected(comeByAccidentBtn, R.drawable.lightning, 0, 0, 0);
@@ -155,12 +159,16 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
             setSelected(btn, R.drawable.atomic, 0, R.drawable.item_selected, 0);
 
+            selectedButton = geneticMutationBtn.getText().toString();
+
         } else if (btn == bornWithThemBtn) {
 
             setSelected(comeByAccidentBtn, R.drawable.lightning, 0, 0, 0);
             setSelected(geneticMutationBtn, R.drawable.atomic, 0, 0, 0);
 
             setSelected(btn, R.drawable.rocket, 0, R.drawable.item_selected, 0);
+
+            selectedButton = bornWithThemBtn.getText().toString();
 
         }
 

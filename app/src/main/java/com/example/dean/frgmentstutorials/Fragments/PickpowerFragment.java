@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dean.frgmentstutorials.Activity.MainActivity;
 import com.example.dean.frgmentstutorials.R;
@@ -39,6 +41,8 @@ public class PickpowerFragment extends Fragment implements View.OnClickListener{
     private Button showBackStoryBtn;
 
     private Button bt;
+
+    private TextView pickPowerTxt;
 
     public PickpowerFragment() {
         // Required empty public constructor
@@ -82,6 +86,8 @@ public class PickpowerFragment extends Fragment implements View.OnClickListener{
         turtlePowerBtn = (Button) view.findViewById(R.id.turtlepowerBtn);
         showBackStoryBtn = (Button) view.findViewById(R.id.showBackStoryBtn);
 
+        pickPowerTxt = (TextView) view.findViewById(R.id.pickPowerTxt);
+
         laserBtn.setOnClickListener(this);
         lightingBtn.setOnClickListener(this);
         flightBtn.setOnClickListener(this);
@@ -90,6 +96,9 @@ public class PickpowerFragment extends Fragment implements View.OnClickListener{
 
         showBackStoryBtn.getBackground().setAlpha(125);
         showBackStoryBtn.setEnabled(false);
+
+        //Toast.makeText(getContext(), "TEST " + mParam1 + " PARAM2 " + mParam2, Toast.LENGTH_SHORT).show();
+        pickPowerTxt.setText(mParam1);
 
         return view;
     }
